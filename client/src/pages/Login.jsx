@@ -1,7 +1,7 @@
 // client/src/pages/Login.jsx
 import React, { useState } from 'react';
-import { loginUser } from '../services/authApi';
-import { useAuth } from '../context/AuthContext';
+import { loginUser } from '../services/authApi.js';
+import { useAuth } from '../context/AuthContext.jsx';
 import { useNavigate, Link } from 'react-router-dom'; // Import Link here
 
 const Login = () => {
