@@ -1,7 +1,7 @@
 // client/src/pages/Register.jsx
 import React, { useState } from 'react';
-import { registerUser } from '../services/authApi';
-import { useAuth } from '../context/AuthContext';
+import { registerUser } from '../services/authApi.js';
+import { useAuth } from '../context/AuthContext.jsx';
 import { useNavigate, Link } from 'react-router-dom'; // Import Link here
 
 const Register = () => {
