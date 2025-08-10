@@ -1,5 +1,5 @@
 // client/src/services/userApi.js
-import { API } from '../context/AuthContext'; // Import the configured Axios instance
+import { API } from '../context/AuthContext.jsx'; // Import the configured Axios instance
 
 // @desc    Get a user's profile by ID
 // @route   GET /api/users/:id
