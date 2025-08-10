@@ -1,6 +1,8 @@
-import dotenv from "dotenv";
 import express, { json, urlencoded } from "express";
 import cors from "cors";
+import dotenv from "dotenv";
+import path from "path";
+
 import { connect } from "mongoose";
 import authRoutes from "./routes/authRoutes.js";
 import postRoutes from "./routes/postRoutes.js";
@@ -10,9 +12,16 @@ dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 5000;
+const __dirname = path.resolve();
 
 // Middleware
-app.use(cors());
+if (process.env.NODE_ENV !== "production") {
+  app.use(
+    cors({
+      origin: "http://localhost:5173",
+    })
+  );
+}
 app.use(json());
 app.use(urlencoded({ extended: true }));
 
@@ -21,10 +30,12 @@ app.use("/api/auth", authRoutes);
 app.use("/api/posts", postRoutes);
 app.use("/api/users", userRoutes);
 
-// Basic Route for testing
-app.get("/", (req, res) => {
-  res.send("Instagram Clone API is running!");
-});
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, "../client/dist")));
+  app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "../client", "dist", "index.html"));
+  });
+}
 
 // MongoDB Connection
 connect(process.env.MONGO_URI)

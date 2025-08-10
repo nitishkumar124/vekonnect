@@ -1,15 +1,5 @@
 // client/src/services/authApi.js
-import axios from "axios";
-
-// Create an Axios instance with a base URL.
-// If proxy is set up in vite.config.js, just use '/api'.
-// Otherwise, use 'http://localhost:5000/api'.
-const API = axios.create({
-  baseURL: "/api", // This will be proxied to http://localhost:5000/api by Vite
-  headers: {
-    "Content-Type": "application/json",
-  },
-});
+import { API } from "../context/AuthContext";
 
 // Add a request interceptor to attach the JWT token to outgoing requests
 API.interceptors.request.use(
