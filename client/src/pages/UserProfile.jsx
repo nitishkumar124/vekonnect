@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { getUserProfile, followUnfollowUser } from '../services/userApi';
-import { useAuth } from '../context/AuthContext';
+import { getUserProfile, followUnfollowUser } from '../services/userApi.js';
+import { useAuth } from '../context/AuthContext.jsx';
 // PostCard is not directly used for displaying the grid of posts, but could be for single post views later.
 // import PostCard from '../components/PostCard';
 
