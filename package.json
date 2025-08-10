@@ -1,0 +1,17 @@
+{
+  "name": "instagram-clone-mern",
+  "version": "1.0.0",
+  "description": "An Instagram clone built with MERN stack",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "dev": "concurrently \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "install-all": "npm install && cd server && npm install && cd ../client && npm install"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
