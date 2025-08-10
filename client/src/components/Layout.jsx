@@ -1,5 +1,5 @@
-import React from 'react';
-import Sidebar from 'Sidebar.jsx'; // <--- IMPORT THE NEW SIDEBAR COMPONENT
+import Sidebar from "./SideBar";
+
 
 const Layout = ({ children }) => {
     return (
