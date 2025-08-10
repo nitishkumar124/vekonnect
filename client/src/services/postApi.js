@@ -1,5 +1,5 @@
 // client/src/services/postApi.js
-import { API } from '../context/AuthContext'; // Import the configured Axios instance
+import { API } from '../context/AuthContext.jsx'; // Import the configured Axios instance
 
 // @desc    Create a new post
 // @route   POST /api/posts
