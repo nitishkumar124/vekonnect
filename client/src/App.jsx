@@ -4,15 +4,15 @@ import {
   Route,
   Navigate,
 } from "react-router-dom";
-import { AuthProvider, useAuth } from "./context/AuthContext";
-import Register from "./pages/Register";
-import Login from "./pages/Login";
-import Home from "./pages/Home";
-import NotFound from "./pages/NotFound";
-import CreatePost from "./pages/CreatePost";
-import UserProfile from "./pages/UserProfile";
-import EditProfile from "./pages/EditProfile";
-import Layout from "./components/Layout";
+import { AuthProvider, useAuth } from "./context/AuthContext.jsx";
+import Register from "./pages/Register.jsx";
+import Login from "./pages/Login.jsx";
+import Home from "./pages/Home.jsx";
+import NotFound from "./pages/NotFound.jsx";
+import CreatePost from "./pages/CreatePost.jsx";
+import UserProfile from "./pages/UserProfile.jsx";
+import EditProfile from "./pages/EditProfile.jsx";
+import Layout from "./components/Layout.jsx";
 
 const PrivateRoute = ({ children }) => {
   const { isAuthenticated, loading } = useAuth();
