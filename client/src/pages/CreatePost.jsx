@@ -1,8 +1,8 @@
 // client/src/pages/CreatePost.jsx
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { createPost } from '../services/postApi';
-import { useAuth } from '../context/AuthContext'; // Keeping this import though 'user' is not currently used in render
+import { createPost } from '../services/postApi.js';
+import { useAuth } from '../context/AuthContext.jsx'; // Keeping this import though 'user' is not currently used in render
 
 const CreatePost = () => {
     const [image, setImage] = useState(null); // Stores the File object
