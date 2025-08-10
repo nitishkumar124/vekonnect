@@ -1,5 +1,5 @@
 // client/src/services/authApi.js
-import { API } from "../context/AuthContext";
+import { API } from "../context/AuthContext.jsx";
 
 // Add a request interceptor to attach the JWT token to outgoing requests
 API.interceptors.request.use(
