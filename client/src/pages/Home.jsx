@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { useAuth } from '../context/AuthContext';
+import { useAuth } from '../context/AuthContext.jsx';
 import { useNavigate, Link } from 'react-router-dom';
-import { getFeedPosts } from '../services/postApi';
-import PostCard from '../components/PostCard';
+import { getFeedPosts } from '../services/postApi.js';
+import PostCard from '../components/PostCard.jsx';
 
 const Home = () => {
     const { user, isAuthenticated, logout, loading } = useAuth();
