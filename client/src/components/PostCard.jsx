@@ -1,7 +1,7 @@
 // client/src/components/PostCard.jsx
 import React, { useState, useEffect } from "react";
-import { useAuth } from "../context/AuthContext";
-import { likeUnlikePost, addComment } from "../services/postApi";
+import { useAuth } from "../context/AuthContext.jsx";
+import { likeUnlikePost, addComment } from "../services/postApi.js";
 import { Link } from "react-router-dom";
 
 const PostCard = ({ post: initialPost }) => {
